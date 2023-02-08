@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import { Routes, BrowserRouter, Route } from "react-router-dom";
+import AdminLayout from "./admin-layout/Admin-layout";
+import DashbordAdmin from "./admin-layout/DashbordAdmin";
+import LoginAdmin from "./admin-layout/LoginAdmin";
+import Home from "./main-layout/Home";
 function App() {
   return (
-    <div style={{fontFamily:"mellony"}} className="App">
-      <h1 >Our Story</h1>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code><h1>hello</h1>
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />}>
+          </Route>
+          <Route path="/Admin-Dashbord" element={<AdminLayout />}>
+            <Route path="" element={<DashbordAdmin />}></Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
