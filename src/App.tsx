@@ -4,8 +4,8 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>hi milad</h1>
+    <div style={{fontFamily:"mellony"}} className="App">
+      <h1 >Our Story</h1>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
