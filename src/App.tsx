@@ -10,6 +10,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />}>
+            
           </Route>
           <Route path="/Admin-Dashbord" element={<AdminLayout />}>
             <Route path="" element={<DashbordAdmin />}></Route>
